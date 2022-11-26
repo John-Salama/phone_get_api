@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
@@ -18,6 +19,16 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/phone_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/price"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rating_bar" />
 
             <ImageView
                 android:id="@+id/phone_image"
@@ -53,27 +64,47 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/name_phone" />
 
-            <TextView
-                android:id="@+id/rate_phone"
+            <RatingBar
+                android:id="@+id/rating_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/rate"
+                android:focusableInTouchMode="false"
+                android:isIndicator="true"
+                android:max="5"
+                android:stepSize="0.01"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/description_phone" />
 
             <TextView
-                android:id="@+id/phone_price"
+                android:id="@+id/phone_price_disc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:text="@string/price"
+                android:layout_marginBottom="8dp"
+                android:text="PriceAfterDisc"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rate_phone" />
+                app:layout_constraintTop_toBottomOf="@+id/phone_price" />
+
+            <TextView
+                android:id="@+id/phone_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_discount"
+                android:includeFontPadding="true"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Discount"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/rating_bar"
+                app:layout_constraintStart_toEndOf="@+id/phone_price"
+                app:layout_constraintTop_toBottomOf="@+id/rating_bar" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
