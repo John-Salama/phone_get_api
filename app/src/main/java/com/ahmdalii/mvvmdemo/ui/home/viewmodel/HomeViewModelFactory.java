@@ -20,7 +20,7 @@ public class HomeViewModelFactory implements ViewModelProvider.Factory {
         if (modelClass.isAssignableFrom(HomeViewModel.class)) {
             return (T) new HomeViewModel(repo);
         } else {
-            throw new IllegalArgumentException("HomeViewModel class not found");
+            throw new IllegalArgumentException("HomeViewModel Class not found");
         }
     }
 }
