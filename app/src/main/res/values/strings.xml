@@ -5,4 +5,10 @@
     <string name="rate">Rate</string>
     <string name="price">Price</string>
     <string name="img">img</string>
+    <string name="priceafterdisc">PriceAfterDisc</string>
+    <string name="discount">Discount</string>
+    <string name="title">Title</string>
+    <string name="Discount">Discount</string>
+    <string name="Priceafterdisc">PriceAfterDisc</string>
+    <string name="Description">Description</string>
 </resources>

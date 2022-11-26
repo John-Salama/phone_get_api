@@ -24,7 +24,7 @@ public class PhoneAdapter extends RecyclerView.Adapter<PhoneAdapter.ViewHolder> 
     List<Products> phones;
 
     public PhoneAdapter(Context context,List<Products> phones){
-        this.context = context;
+        PhoneAdapter.context = context;
         this.phones = phones;
     }
 
@@ -49,8 +49,8 @@ public class PhoneAdapter extends RecyclerView.Adapter<PhoneAdapter.ViewHolder> 
         holder.ratingBar.setRating(product.getRating());
         if (product.getDiscountPercentage() != 0) {
             holder.phonePriceText.setPaintFlags(holder.phonePriceText.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-            holder.discount.setText("-" + Float.toString(product.getDiscountPercentage())+ "%");
-            holder.priceAfterDiscount.setText("EGP "+ Float.toString((float) (product.getPrice() - product.getDiscountPercentage() * product.getPrice() / 100)));
+            holder.discount.setText("-" + product.getDiscountPercentage() + "%");
+            holder.priceAfterDiscount.setText("EGP "+ (float) (product.getPrice() - product.getDiscountPercentage() * product.getPrice() / 100));
         } else
         {
             holder.discount.setVisibility(View.INVISIBLE);

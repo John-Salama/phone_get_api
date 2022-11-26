@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="PriceAfterDisc"
+        android:text="@string/Priceafterdisc"
         app:layout_constraintStart_toStartOf="@+id/info_price"
         app:layout_constraintTop_toBottomOf="@+id/info_price" />
 
@@ -25,12 +25,13 @@
         android:includeFontPadding="true"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:text="Discount"
+        android:text="@string/Discount"
         android:textColor="#FFFFFF"
-        android:textSize="10sp"
+        android:textSize="11sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/info_price"
-        app:layout_constraintTop_toBottomOf="@+id/info_title" />
+        app:layout_constraintTop_toBottomOf="@+id/info_title"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/info_price"
@@ -48,9 +49,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
+        android:contentDescription="@string/img"
         app:layout_constraintBottom_toBottomOf="@+id/info_price_disc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -59,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:text="Title"
+        android:text="@string/title"
         app:layout_constraintStart_toEndOf="@+id/info_image"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -91,7 +94,7 @@
             android:id="@+id/info_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Description"
+            android:text="@string/Description"
             android:textSize="20sp" />
     </ScrollView>
 
